@@ -1,8 +1,10 @@
 ---
 layout: default
 title: "NBA Fantasy Points Across Eras: A Data-Driven Public Visualization"
-author: "By Yara He"
+author: "By Yiran He"
 ---
+
+
 
 # 🏀 NBA Fantasy Points Across Eras  
 ### *By Yara He*
