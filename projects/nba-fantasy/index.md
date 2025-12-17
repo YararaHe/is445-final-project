@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "NBA Fantasy Points Across Eras: A Data-Driven Public Visualization"
 author: "By Yiran He"
 ---
