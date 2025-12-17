@@ -27,8 +27,8 @@ This section contains an interactive exploration of NBA players' fantasy perform
 You can hover, zoom, or interact with the visualization.
 
 👉 **(The interactive chart will appear below once rendered)**
+*(Interactive visualization will be embedded here.)*
 
-{% include career_fantasy.html %}
 
 > *Note: If the visualization is still loading or shows empty space, it means the interactive chart is being prepared. The chart is embedded using standard Altair HTML export.*
 
@@ -36,8 +36,8 @@ You can hover, zoom, or interact with the visualization.
 
 # 📊 Context Visualization 1: Fantasy Points by Age  
 Understanding age-related performance patterns helps contextualize career arcs.
+*(Context visualization: Fantasy Points by Age.)*
 
-{% include age_distribution.html %}
 
 Research consistently shows that peak fantasy performance generally occurs between **ages 25–30**, matching typical NBA athletic primes.
 
@@ -45,8 +45,8 @@ Research consistently shows that peak fantasy performance generally occurs betwe
 
 # 📈 Context Visualization 2: Top Fantasy Performers by Season  
 This visualization highlights the top players by season, showing shifts across eras.
+*(Context visualization: Top Fantasy Performers by Season.)*
 
-{% include top10_season.html %}
 
 From Shaq and Tim Duncan dominating the early 2000s, to LeBron, Harden, and Westbrook in the 2010s, and Jokic/Giannis in the 2020s — the top fantasy performers reflect league evolution.
 
