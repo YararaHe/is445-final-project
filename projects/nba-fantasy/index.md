@@ -1,97 +1,73 @@
----
-title: "NBA Fantasy Points Across Eras: A Data-Driven Public Visualization"
-author: "By Yiran He"
----
-
-
-
-# 🏀 NBA Fantasy Points Across Eras  
-### *By Yara He*
-
-Over the past 27 NBA seasons — from 1996–97 to the modern era — the league has drastically evolved.  
-The pace increased. Shot profiles shifted. Stars took on heavier playmaking loads. And as a result, **NBA Fantasy Points** (a combined performance metric) changed across eras and across player careers.
-
-This article uses a dataset of **over 15,000 player-seasons** to help readers explore:
-
-- How fantasy production has changed through time  
-- Which ages and career stages produce the most impact  
-- How league context and team environment influence player output  
-
-The data comes from the dataset `player_stats_scoring_rs.csv`, which includes 43 statistical features per player-season.
+# 🏀 NBA Fantasy Points Across Eras: A Data-Driven Public Visualization  
+**Author: Yara He**  
+**Group members: Yara He (Individual submission)**
 
 ---
 
-# ⭐ Interactive Visualization (Main Chart)
+## Why Fantasy Points?
+NBA fantasy points combine many box-score stats (points, rebounds, assists, steals, blocks, etc.) into one number.  
+For public readers, this is useful because it turns “overall impact” into a single score that is easier to compare across players and seasons.
 
-This section contains an interactive exploration of NBA players' fantasy performance across seasons.  
-You can hover, zoom, or interact with the visualization.
-
-👉 **(The interactive chart will appear below once rendered)**
-*(Interactive visualization will be embedded here.)*
-
-
-> *Note: If the visualization is still loading or shows empty space, it means the interactive chart is being prepared. The chart is embedded using standard Altair HTML export.*
+In this project, I use player regular-season data from **1996–97 to 2022–23** to explore how fantasy production changed across eras, and what factors (like age) relate to higher fantasy impact.
 
 ---
 
-# 📊 Context Visualization 1: Fantasy Points by Age  
-Understanding age-related performance patterns helps contextualize career arcs.
-*(Context visualization: Fantasy Points by Age.)*
+## ⭐ Central Interactive Visualization: Average Fantasy Points by Season
+This main interactive chart shows how **average NBA fantasy points per season** change over time.  
+You can hover over each season to see the exact values and observe long-term trends.
 
+<iframe src="main_fantasy_trend.html" width="820" height="520" style="border:none;"></iframe>
 
-Research consistently shows that peak fantasy performance generally occurs between **ages 25–30**, matching typical NBA athletic primes.
-
----
-
-# 📈 Context Visualization 2: Top Fantasy Performers by Season  
-This visualization highlights the top players by season, showing shifts across eras.
-*(Context visualization: Top Fantasy Performers by Season.)*
-
-
-From Shaq and Tim Duncan dominating the early 2000s, to LeBron, Harden, and Westbrook in the 2010s, and Jokic/Giannis in the 2020s — the top fantasy performers reflect league evolution.
+**What to notice:** In modern seasons, fantasy production tends to be higher. This aligns with changes in league pace, spacing, and star usage.
 
 ---
 
-# 🧠 What We Learn From the Data
+## Context Visualization 1: Fantasy Points vs Age
+A common question for fans is: **what age is a player’s “prime”?**  
+This plot shows the relationship between player age and fantasy points.
 
-### 1. Player usage and responsibility have increased  
-Modern stars contribute more across scoring, assists, and playmaking, boosting fantasy totals.
+<iframe src="fantasy_by_age.html" width="820" height="520" style="border:none;"></iframe>
 
-### 2. Age strongly predicts performance  
-Fantasy output rises quickly, peaks in the late 20s, then declines gradually in the 30s.
-
-### 3. Team environment matters  
-Players on strong teams often score more efficiently, while players on weaker teams may accumulate stats through higher usage.
+**Interpretation:** Most players cluster around higher output in their mid-to-late 20s, while younger players show larger variance and older players often decline.
 
 ---
 
-# 📁 Dataset Information
+## Context Visualization 2: Top Fantasy Performances (Single Season)
+To anchor the trend with real examples, this chart highlights some of the highest fantasy seasons in the dataset.
 
-**Dataset:**  
-*Player Regular Season Fantasy Data, 1996–2023*  
-- Includes: PLAYER_NAME, AGE, GP, PTS, REB, AST, STL, BLK, advanced ranking features, and NBA_FANTASY_PTS  
-- Rows: ~15,000  
-- Columns: 43  
+<iframe src="top_fantasy_players.html" width="820" height="520" style="border:none;"></iframe>
 
-**Source:**  
-Kaggle – NBA Statistics Repository (1996–2023)  
-(*Add your exact link here if needed*)
+This helps readers connect “era trend” to actual star seasons.
 
 ---
 
-# 📓 Analysis Notebooks
+## Data & Methods (Beginner-friendly)
+- **Dataset:** `player_stats_scoring_rs.csv` (player-season regular season stats, 1996–2023)  
+- Each row represents **one player in one season**.
+- Key columns used:
+  - `SEASON` (season label)
+  - `AGE`
+  - `NBA_FANTASY_PTS` (fantasy metric)
 
-- Part 1 Notebook: *(link to workshop notebook or GitHub upload if available)*  
-- Part 2 Visualization Notebook: *(link to workshop notebook or GitHub upload if available)*  
-
-If your notebooks were created in the course Workshop environment, link them via UIUC’s platform or note that they were generated in the course Jupyter environment.
+All visualizations were created in Python using **Pandas + Altair**, exported as HTML, and embedded into this GitHub Pages article.
 
 ---
 
-# ✔ Conclusion
+## Sources & Citations
+- **Primary dataset:** NBA player statistics dataset (1996–2023).  
+  (Put your exact dataset source link here — Kaggle / GitHub repo / class-provided source)
+- **NBA context references:** General NBA historical context (pace, three-point era) based on widely known league trends.
 
-This public visualization aims to make NBA performance data accessible and intuitive, even for readers without data science backgrounds.  
-By combining interactive charts with contextual visuals, the story of how NBA players evolve — and how the league itself changes — becomes clearer.
+---
 
-Thank you for exploring this visualization!
+## Notebook Links
+- Analysis notebook (Part 2 / Part 3 development):  
+  - Link: (upload your `.ipynb` to this repo, then paste the GitHub link here)
+
+---
+
+## Conclusion
+Fantasy points provide a simple way to compare player impact across time.  
+By combining an interactive season trend with contextual views (age relationship and top seasons), this article shows how both the NBA and player careers have evolved across eras.
+
 
