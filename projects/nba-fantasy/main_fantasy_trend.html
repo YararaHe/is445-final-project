@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ffdb7da8653045e1ba5b3c7bfe06653a"}, "mark": {"type": "line", "point": true}, "encoding": {"tooltip": [{"field": "SEASON", "type": "nominal"}, {"field": "NBA_FANTASY_PTS", "type": "quantitative"}], "x": {"field": "SEASON", "title": "NBA Season", "type": "nominal"}, "y": {"field": "NBA_FANTASY_PTS", "title": "Average Fantasy Points", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_1e9efca18e7a2868", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Average NBA Fantasy Points by Season", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-ffdb7da8653045e1ba5b3c7bfe06653a": [{"SEASON": "1996-97", "NBA_FANTASY_PTS": 17.08548752834467}, {"SEASON": "1997-98", "NBA_FANTASY_PTS": 17.02255125284738}, {"SEASON": "1998-99", "NBA_FANTASY_PTS": 15.904772727272729}, {"SEASON": "1999-00", "NBA_FANTASY_PTS": 17.149430523917996}, {"SEASON": "2000-01", "NBA_FANTASY_PTS": 16.968027210884355}, {"SEASON": "2001-02", "NBA_FANTASY_PTS": 17.247272727272726}, {"SEASON": "2002-03", "NBA_FANTASY_PTS": 16.92032710280374}, {"SEASON": "2003-04", "NBA_FANTASY_PTS": 16.69954751131222}, {"SEASON": "2004-05", "NBA_FANTASY_PTS": 17.020474137931036}, {"SEASON": "2005-06", "NBA_FANTASY_PTS": 16.517248908296942}, {"SEASON": "2006-07", "NBA_FANTASY_PTS": 16.818995633187775}, {"SEASON": "2007-08", "NBA_FANTASY_PTS": 17.21130820399113}, {"SEASON": "2008-09", "NBA_FANTASY_PTS": 17.50449438202247}, {"SEASON": "2009-10", "NBA_FANTASY_PTS": 17.6368778280543}, {"SEASON": "2010-11", "NBA_FANTASY_PTS": 17.08340707964602}, {"SEASON": "2011-12", "NBA_FANTASY_PTS": 16.864644351464435}, {"SEASON": "2012-13", "NBA_FANTASY_PTS": 16.917910447761194}, {"SEASON": "2013-14", "NBA_FANTASY_PTS": 16.888796680497926}, {"SEASON": "2014-15", "NBA_FANTASY_PTS": 17.06321138211382}, {"SEASON": "2015-16", "NBA_FANTASY_PTS": 17.47920168067227}, {"SEASON": "2016-17", "NBA_FANTASY_PTS": 17.395473251028807}, {"SEASON": "2017-18", "NBA_FANTASY_PTS": 16.802222222222223}, {"SEASON": "2018-19", "NBA_FANTASY_PTS": 17.782264150943398}, {"SEASON": "2019-20", "NBA_FANTASY_PTS": 17.88601134215501}, {"SEASON": "2020-21", "NBA_FANTASY_PTS": 18.276296296296298}, {"SEASON": "2021-22", "NBA_FANTASY_PTS": 17.083471074380164}, {"SEASON": "2022-23", "NBA_FANTASY_PTS": 18.330426716141}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

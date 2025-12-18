@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-a94c9d75232f128537a894eef0e1e7e1"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "PLAYER_NAME", "title": "Player", "type": "nominal"}, {"field": "SEASON", "title": "Season", "type": "nominal"}, {"field": "NBA_FANTASY_PTS", "format": ".1f", "title": "Fantasy Pts", "type": "quantitative"}], "x": {"field": "NBA_FANTASY_PTS", "title": "NBA Fantasy Points", "type": "quantitative"}, "y": {"field": "PLAYER_NAME", "sort": "-x", "title": "Player", "type": "nominal"}}, "height": 480, "title": "Top 10 Fantasy Performances (Single Season)", "width": 760, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-a94c9d75232f128537a894eef0e1e7e1": [{"PLAYER_NAME": "Russell Westbrook", "SEASON": "2016-17", "NBA_FANTASY_PTS": 60.6}, {"PLAYER_NAME": "Shaquille O'Neal", "SEASON": "1999-00", "NBA_FANTASY_PTS": 59.3}, {"PLAYER_NAME": "James Harden", "SEASON": "2018-19", "NBA_FANTASY_PTS": 58.7}, {"PLAYER_NAME": "Nikola Jokic", "SEASON": "2021-22", "NBA_FANTASY_PTS": 58.6}, {"PLAYER_NAME": "James Harden", "SEASON": "2019-20", "NBA_FANTASY_PTS": 57.1}, {"PLAYER_NAME": "Shaquille O'Neal", "SEASON": "2000-01", "NBA_FANTASY_PTS": 56.8}, {"PLAYER_NAME": "Luka Doncic", "SEASON": "2022-23", "NBA_FANTASY_PTS": 56.8}, {"PLAYER_NAME": "Kevin Garnett", "SEASON": "2003-04", "NBA_FANTASY_PTS": 56.7}, {"PLAYER_NAME": "Giannis Antetokounmpo", "SEASON": "2019-20", "NBA_FANTASY_PTS": 56.6}, {"PLAYER_NAME": "Giannis Antetokounmpo", "SEASON": "2021-22", "NBA_FANTASY_PTS": 56.5}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
