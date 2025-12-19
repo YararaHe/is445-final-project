@@ -1,2 +1,7 @@
 theme: minima
 markdown: kramdown
+
+title: "IS445 Final Project"
+baseurl: "/is445-final-project"
+url: "https://yararahe.github.io"
+
