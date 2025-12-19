@@ -1,8 +1,4 @@
 ---
-layout: default
-title: "🏀 NBA Fantasy Points Across Eras: A Data-Driven Public Visualization"
-author: "Yiran He"
----
 
 **Author:** Yiran He  
 **Group members:** Yiran He (Individual submission)
