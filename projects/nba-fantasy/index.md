@@ -1,5 +1,13 @@
-**Author: Yiran He**  
-**Group members: Yiran He (Individual submission)**
+---
+layout: default
+title: "🏀 NBA Fantasy Points Across Eras: A Data-Driven Public Visualization"
+author: "Yiran He"
+---
+
+**Author:** Yiran He  
+**Group members:** Yiran He (Individual submission)
+
+---
 
 ## Why Fantasy Points?
 NBA fantasy points combine many box-score stats (points, rebounds, assists, steals, blocks, etc.) into one number. For public readers, that’s useful because it turns “overall impact” into a single score that is easier to compare across players and seasons.
